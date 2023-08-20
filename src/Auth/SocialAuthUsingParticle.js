@@ -14,7 +14,7 @@ import SendToken from "../components/SendToken";
 import WalletContext from "../context/wallet-context";
 import DappABI from "../contract-ABI/DappABI";
 import ClaimPortalABI from "../contract-ABI/ClaimPortalABI";
-import styles from "./login.module.css"
+import styles from "./login.module.css";
 
 export default function SocialAuthUsingParticle() {
   const [address, setAddress] = useState("");
@@ -28,9 +28,9 @@ export default function SocialAuthUsingParticle() {
   const navigate = useNavigate();
 
   const particle = new ParticleAuthModule.ParticleNetwork({
-    projectId: "7372f9b0-f9a5-4ae8-b98a-3ea2c528fa80",
-    clientKey: "cDs5SMAkmcr7a5dwU4vZh6Lv3B8MHktdEORk2YKO",
-    appId: "78169d25-7468-4b50-b82b-f0a61f49a725",
+    projectId: projectId,
+    clientKey: clientKey,
+    appId: appId,
     chainName: "polygon", //optional: current chain name, default Ethereum.
     chainId: ChainId.POLYGON_MUMBAI,
     wallet: {
@@ -40,16 +40,14 @@ export default function SocialAuthUsingParticle() {
   });
 
   const bundler = new Bundler({
-    bundlerUrl:
-      "https://bundler.biconomy.io/api/v2/80001/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44",
+    bundlerUrl: "your own bundler URL",
 
     chainId: ChainId.POLYGON_MUMBAI,
     entryPointAddress: DEFAULT_ENTRYPOINT_ADDRESS,
   });
 
   const paymaster = new BiconomyPaymaster({
-    paymasterUrl:
-      "https://paymaster.biconomy.io/api/v1/80001/BleEdu_JM.ece6238c-ff7f-447a-9035-ad9a88b7a702",
+    paymasterUrl: "Your own paymaster URL",
   });
 
   console.log(ctx);
@@ -160,20 +158,20 @@ export default function SocialAuthUsingParticle() {
     <>
       {ctx.address && navigate("/profile")}
       <div className={styles.loginContainer}>
-      <form className={styles.loginForm} action="login" method="post">
-        <img
-          src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
-          alt="Login Illustration"
-          className={styles.loginImage}
-        />
-        <h1>Login to WAGMI</h1>
-        {!loading && !address && (
-          <button className={styles.loginButton} onClick={connect}>
-            Click to login
-          </button>
-        )}
-      </form>
-    </div>
+        <form className={styles.loginForm} action="login" method="post">
+          <img
+            src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
+            alt="Login Illustration"
+            className={styles.loginImage}
+          />
+          <h1>Login to WAGMI</h1>
+          {!loading && !address && (
+            <button className={styles.loginButton} onClick={connect}>
+              Click to login
+            </button>
+          )}
+        </form>
+      </div>
       {ctx.address && navigate("/profile")}
     </>
   );

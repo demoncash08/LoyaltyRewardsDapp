@@ -1,0 +1,20 @@
+/* HomePgae.css */
+
+.slider-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Set the desired height for your images */
+  background-color: #f0f0f0; /* Fallback background color */
+}
+
+.slider-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill; /* Adjust the image fit as needed */
+}
+
+.heading {
+  font-size: 40px;
+  text-align: center;
+}

@@ -6,6 +6,7 @@ import TokenABI from "../../contract-ABI/TokenAbi";
 import SuperAdminPortal from "../../components/functions/SuperAdmin/SuperAdminPortal";
 import RewardForPurchase from "../../components/functions/SuperAdmin/RewardForPurchase";
 import styles from "./style.module.css";
+import SalesList from "./SalesList";
 function SuperAdminPage() {
   const ctx = useContext(WalletContext);
   const navigate = useNavigate();
@@ -39,7 +40,7 @@ function SuperAdminPage() {
     }
   }
   return (
-      <div className={styles.superAdminSection}>
+    <div className={styles.superAdminSection}>
       <h2 className={styles.sectionTitle}>Super admin</h2>
       {contract && (
         <p className={styles.balance}>
@@ -50,6 +51,7 @@ function SuperAdminPage() {
         <SuperAdminPortal />
         <RewardForPurchase />
       </div>
+      <SalesList />
     </div>
   );
 }

@@ -93,10 +93,6 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className={styles.productCard}>
-      <h2>{product.attributes.title}</h2>
-      <p className={styles.description}>{product.attributes.description}</p>
-      <p className={styles.price}>Price: {product.attributes.price} WAGMI</p>
-
       {product.attributes.image && (
         <img
           src={imgUrl}
@@ -104,6 +100,9 @@ const ProductCard = ({ product }) => {
           className={styles.productImage}
         />
       )}
+      <h2 className={styles.name}>{product.attributes.title}</h2>
+      <p className={styles.price}>Price: {product.attributes.price} WAGMI</p>
+      <p className={styles.description}>{product.attributes.description}</p>
 
       {/* <p>Quantity: {product.attributes.quantity}</p>
       <p>Seller Email: {product.attributes.sellerEmail}</p>

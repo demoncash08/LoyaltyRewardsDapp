@@ -1,0 +1,35 @@
+/* SalesList.module.css */
+.salesListContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.salesListItem {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.salesListItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.salesListItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.salesListItem p {
+  margin: 5px 0;
+}
+
+.salesListItem .createdAt {
+  font-size: 0.8rem;
+  color: #999999;
+}

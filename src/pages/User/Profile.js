@@ -8,6 +8,7 @@ import ClaimPortalABI from "../../contract-ABI/ClaimPortalABI";
 import Claim from "../../components/functions/Claim";
 import TransactionHistoryMenu from "./TransactionHistoryMenu";
 import styles from "./ProfilePage.module.css";
+import ReferAndEarn from "./ReferPage/ReferAndEarn";
 
 const ProfilePage = () => {
   const ctx = useContext(WalletContext);
@@ -21,7 +22,7 @@ const ProfilePage = () => {
       navigate("/login");
     } else {
       // Call checkBalance immediately when ctx.address is available
-      checkBalance();
+      // checkBalance();
       fetchTransactions(); // Move it here
     }
   }, [ctx.address, navigate]);
@@ -81,6 +82,7 @@ const ProfilePage = () => {
         {balance !== null && (
           <p className={styles.balance}>Balance: {balance.toString()} tokens</p>
         )}
+        <p>Wallet address= {ctx.address}</p>
       </div>
 
       {contract && <Claim />}
@@ -99,8 +101,11 @@ const ProfilePage = () => {
           onClose={() => setIsMenuOpen(false)}
         />
       </div>
-    </div>
 
+      <div className={styles.referSection}>
+        <ReferAndEarn />
+      </div>
+    </div>
   );
 };
 
