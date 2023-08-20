@@ -1,0 +1,31 @@
+/* Styles for the super admin section */
+.superAdminSection {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Styles for the balance */
+  .balance {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Styles for the section title */
+  .sectionTitle {
+    font-size: 24px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Flex container for the components */
+  .componentsContainer {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; */
+    margin-top: -10px;
+    height: auto;
+    /* background-color: blue; */
+  }
+  

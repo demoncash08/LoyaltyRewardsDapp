@@ -1,0 +1,46 @@
+/* Login.module.css */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .loginForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .loginImage {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .loginForm h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .loginButton {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ff6b00;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .loginButton:hover {
+    background-color: #ff4f00;
+  }
+  

@@ -1,0 +1,53 @@
+
+  
+  .container {
+    text-align: center;
+  }
+  
+  .wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #3498db;
+  }
+  
+  .section {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 150px 150px 0;
+    border-color: transparent transparent transparent transparent;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    transform-origin: bottom;
+    transform: rotate(var(--deg));
+    text-align: center;
+    line-height: 300px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .section:nth-child(odd) {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .section:nth-child(even) {
+    background-color: white;
+    color: #3498db;
+  }
+  
+  .spin-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  

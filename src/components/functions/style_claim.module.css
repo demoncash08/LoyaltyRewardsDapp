@@ -1,0 +1,36 @@
+/* Styles for the container */
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Styles for the claim buttons */
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the ToastContainer */
+  .toastContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  /* Dark theme for ToastContainer */
+  .toastDark {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Additional styles for the claim buttons on hover */
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

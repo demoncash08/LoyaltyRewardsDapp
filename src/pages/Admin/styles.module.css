@@ -1,0 +1,27 @@
+/* Styles for the admin page section */
+.adminPageSection {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Styles for the section title */
+  .sectionTitle {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for the balance and allowance */
+  .balanceAllowance {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight:  500;
+  }
+  
+  /* Flex container for the components */
+  .componentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  

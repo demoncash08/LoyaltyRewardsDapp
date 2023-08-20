@@ -1,0 +1,71 @@
+/* Nav.module.css */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2874f0;
+    color: #fff;
+    padding: 1rem;
+  }
+  
+  .leftSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 80px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .logo span {
+    font-size: 1.2rem;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem; /* Adjust spacing between links */
+  }
+  
+  .navLinks a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles for the active link */
+  .active {
+    font-weight: bold;
+  }
+  
+  .rightSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .formButton {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+  }
+  
+  .formButton:hover {
+    text-decoration: underline;
+  }
+  
